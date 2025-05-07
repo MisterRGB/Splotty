@@ -3,10 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Splotty/',
+  base: '/',
   build: {
     outDir: 'dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      external: ['/Splotty/assets/index-DJOJrYoS.js']
+    }
   },
   publicDir: 'public'
 })
